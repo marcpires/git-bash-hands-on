@@ -1,7 +1,10 @@
 # git-bash-hands-on
+
 Git and Bash hands on
 
-installing git
+## installing git
 
-sudo apt install git-all
+```shell
+$ sudo apt install -y git-all
+```
 
