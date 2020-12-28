@@ -24,7 +24,7 @@ $ git checkout -b <name>
 
 ## ======= trabalhando com o controle remoto ==================
 ## Começamos agora a gerenciar o repositório de forma remota, onde primeiro 
-## precisamos adicionar o repositório para o micro local utilizando o comando "git add <Nome> <URL>"
+## precisamos adicionar o repositório para o micro local utilizando o comando "git add <nome> <URL>"
 ## podemos acessar o repositório das seguintes formas:
 ## 1) git remote add origin-2 git@github.com:marcpires/git-bash-hands-on.git
 ## 2) git remote add origin https://github.com/marcpires/git-bash-hands-on.git
