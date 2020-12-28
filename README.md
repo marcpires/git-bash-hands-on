@@ -8,7 +8,14 @@ Git and Bash hands on
 $ sudo apt install -y git-all
 ```
 
-## =========== inicializando o repositório ======================
+## create a new branch
+
+```shell
+$ git checkout -b <name>
+```
+
+## =========== RESUMO DIA 24/12/2020 =======================================
+## =========== inicializando o repositório =================================
 ## Começamos inicializando um repositório para controle de versão utilizando
 ## o comando "git init" onde cria um subdiretório chamado ".git" que irá conter
 ## todos os arquivos de repositório necessário, com a  pasta ".git" podemos
@@ -38,9 +45,6 @@ $ sudo apt install -y git-all
 
 ## ======= criando uma feature branch e um pull request ==============
 ## Utilizando o comando "git checkout -b doc/resume" iremos criar a feature branch e em seguido será feito o checkout, após ter criado a feature branch iremos dar um push para envia o conteudo ao repositório remoto utilizando o comando "git push".
-
-
-
 
 
 
