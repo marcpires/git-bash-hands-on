@@ -29,7 +29,13 @@ $ sudo apt install -y git-all
 ## O git pull irá executar git fetch com os parâmetro e chama o git merge para mesclar as informações
 ## do branch antigo no atual.
 
-## ======= 
+## ======= Adicionando um conteúdo a um commit ========================
+## Utilizando o comando "git add .", vamos estar preparando o arquivo para entrar na proxima revisão do repositório
+## Agora utilizamos o comando "git commit -m", onde iremos pegar todos os arquivos que estão no "INDEX" que o comando "add"
+## adicionou e criou uma revisão com um número e um comentário, que será vista por todos.
+## utilizando o comando "git show" podemos ver o que foi adicionado ao arquivo.
+
+
 
 
 
