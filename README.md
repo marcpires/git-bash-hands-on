@@ -24,8 +24,8 @@ $ git checkout -b <name>
 * Trabalhando e Gerenciando repositórios remoto
 
 ###### Começamos agora a gerenciar o repositório de forma remota, onde primeiro precisamos adicionar o repositório para o micro local utilizando o comando "git add <nome> <URL>", podemos acessar o repositório das seguintes formas: 
-* 1) git remote add origin-2 git@github.com:marcpires/git-bash-hands-on.git 
-* 2) git remote add origin https://github.com/marcpires/git-bash-hands-on.git
+1. git remote add origin-2 git@github.com:marcpires/git-bash-hands-on.git 
+2. git remote add origin https://github.com/marcpires/git-bash-hands-on.git
 
 * Alterando informações de um repositório remoto na branch atual 
 
@@ -38,5 +38,3 @@ $ git checkout -b <name>
 * Criando uma feature branch e um Pull Request (PR) 
 
 ###### Utilizando o comando "git checkout -b doc/resume" iremos criar a feature branch e em seguido será feito o checkout, após ter criado a feature branch iremos dar um push para envia o conteudo ao repositório remoto utilizando o comando "git push".
-
-
