@@ -23,17 +23,22 @@ $ sudo apt install -y git-all
 ## 2) git remote add origin https://github.com/marcpires/git-bash-hands-on.git
 
 ## ========= alterando informações de um repositório remoto na branch atual ==============
-## Utilizamos para efetuar as alterações o comando "git pull <nome>", não podemos esquecer de mudar o nome
-## da branch de "master" para "main", pois no repositório remoto do git está como "main" o padrão.
+## Utilizamos para baixar e efetuar a atualização imediata o comando "git pull <nome>", não podemos esquecer de mudar o
+## nome da branch de "master" para "main", pois no repositório remoto do git está como "main" o padrão.
 ## Após a modificação utilizando o comando "git branch -m master main", fazemos o "pull origin main".
 ## O git pull irá executar git fetch com os parâmetro e chama o git merge para mesclar as informações
 ## do branch antigo no atual.
+## Caso queremos remover algum arquivo, podemos utilizar o comando "git remove <nome>".
 
-## ======= Adicionando um conteúdo a um commit ========================
+## ======= adicionando um conteúdo a um commit ========================
 ## Utilizando o comando "git add .", vamos estar preparando o arquivo para entrar na proxima revisão do repositório
 ## Agora utilizamos o comando "git commit -m", onde iremos pegar todos os arquivos que estão no "INDEX" que o comando "add"
 ## adicionou e criou uma revisão com um número e um comentário, que será vista por todos.
 ## utilizando o comando "git show" podemos ver o que foi adicionado ao arquivo.
+
+## ======= criando uma feature branch e um pull request ==============
+## Utilizando o comando "git checkout -b doc/resume" iremos criar a feature branch e em seguido será feito o checkout, após ter criado a feature branch iremos dar um push para envia o conteudo ao repositório remoto utilizando o comando "git push".
+
 
 
 
