@@ -38,3 +38,11 @@ $ git checkout -b <name>
 * Criando uma feature branch e um Pull Request (PR) 
 
 ###### Utilizando o comando "git checkout -b doc/resume" iremos criar a feature branch e em seguido será feito o checkout, após ter criado a feature branch iremos dar um push para envia o conteudo ao repositório remoto utilizando o comando "git push".
+
+# Topic I
+
+# Topic II
+
+# Topic III
+
+# Topic IV
