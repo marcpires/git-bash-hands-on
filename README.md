@@ -50,3 +50,5 @@ $ git checkout -b <name>
 # Topic V
 
 # Topic VI
+
+# Topic VII
