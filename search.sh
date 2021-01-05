@@ -5,7 +5,6 @@
 # Script básico que recebe um argumento e procura o arquivo no diretorio HOME.
 
 
-
 # verificando o argumento de entrada
 if [ $# -eq 0 ]; then
     echo "Faltou utilizar pelo menos 1 argumento!!"
