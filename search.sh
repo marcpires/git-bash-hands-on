@@ -19,7 +19,6 @@ else
         if [ -e $FILE ]; then    
             find $HOME/ -name $FILE      #OBS: Pode utilizar "$HOME ou ~/" para referenciar o local home
 
-            
         else
             echo "Arquivo não encontrado!"
             exit 1;
