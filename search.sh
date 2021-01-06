@@ -4,7 +4,6 @@
 
 # Script básico que recebe um argumento e procura o arquivo no diretorio HOME.
 
-
 # verificando o argumento de entrada
 if [ $# -eq 0 ]; then
     echo "Faltou utilizar pelo menos 1 argumento!!"
@@ -18,7 +17,8 @@ else
     else
         read FILE
         if [ -e $FILE ]; then    
-            find ~/ -name FILE      #comando a ser executado
+            find $HOME/ -name $FILE      #OBS: Pode utilizar "$HOME ou ~/" para referenciar o local home
+
             
         else
             echo "Arquivo não encontrado!"
