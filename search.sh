@@ -19,6 +19,7 @@ if [ -z $FILE ]; then
         find $HOME  -iname $FILE      #OBS: You can use "$HOME or ~/" to reference the home location
 
 fi
+
 }
 
 if [ $# -eq 0 ]; then
@@ -28,4 +29,5 @@ if [ $# -eq 0 ]; then
 else
     search "$1"
 fi
+
 
