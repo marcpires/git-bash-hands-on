@@ -23,7 +23,7 @@ fi
 }
 
 if [ $# -eq 0 ]; then
-    echo "Enter at least one argument: "
+    echo -n "Enter at least one argument: " 
     read FILE
     search FILE
 else
