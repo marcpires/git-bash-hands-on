@@ -12,14 +12,28 @@
         }
     ],
     "paths": {
-        "/v1/dns": {
+        "/data/dns/{id}": {
             "get": {
-                "description": "Returns ID-based DNS ",
+                "tags": [
+                    "dns"
+                ],
+                "description": "Returns ID based DNS ",
                 "summary": "Find DNS by ID",
                 "operationId": "getDnsById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of DNS",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "DNS response",
+                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -30,23 +44,84 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "invalid request",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ID not found",
+                        "content": {}
                     }
                 }
             },
             "delete": {
-                "description": "Delete DNS",
+                "tags": [
+                    "dns"
+                ],
                 "summary": "Delete DNS by ID",
+                "description": "Delete DNS",
                 "operationId": "deleteDnsById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of DNS to deleted",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "successful eraser!"
+                    },
+                    "400": {
+                        "description": "Invalid ID",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ID not found",
+                        "content": {}
                     }
                 }
             },
             "post": {
+                "tags": [
+                    "dns"
+                ],                
                 "description": "creating DNS",
                 "summary": "Cretate DNS",
                 "operationId": "postDns",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "name",
+                                    "ipAddress",
+                                    "domainName"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "ipAddress": {
+                                        "type": "string"
+                                    },
+                                    "domainName": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Created DNS.",
@@ -68,9 +143,51 @@
                 }
             },
             "put": {
+                "tags": [
+                    "dns"
+                ],
                 "description": "Updated dns information",
                 "summary": "update of the DNS.",
                 "operationId": "updateDnsbyId",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "DNS ID to be updated",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "name",
+                                    "ipAddress",
+                                    "domainName"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "ipAddress": {
+                                        "type": "string"
+                                    },
+                                    "domainName": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "update of the DNS.",
@@ -85,26 +202,16 @@
                             }
                         }
                     },
-                    "405": {
-                        "description": "Method Not Allowed",
+                    "400": {
+                        "description": "Invalid ID",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ID not found",
                         "content": {}
                     }
                 }
-            },
-            "parameters": [
-                {
-                    "name": "id",
-                    "in": "path",
-                    "description": "ID of DNS to use",
-                    "required": true,
-                    "schema": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    }
-                }
-            ]
+            }
         }
     }
 }
