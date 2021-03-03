@@ -17,7 +17,7 @@
 ## Git
 
 * [Untitled](git/untitled.md)
-* [Resumo de atividades](git/resumo-de-atividades.md)
+* [Resumo de atividades 24/12/2020](git/resumo-de-atividades-24-12-2020.md)
 
 ## Metrics and Logs
 

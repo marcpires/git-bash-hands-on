@@ -1,4 +1,4 @@
-# Resumo de atividades
+# Resumo de atividades 24/12/2020
 
 ## 24/12/2020 - Resumo da Introdução aos Comandos do GIT
 
