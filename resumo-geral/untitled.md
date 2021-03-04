@@ -1,8 +1,4 @@
----
-description: Concepts
----
-
-# Get started
+# Untitled
 
 ## Getting Super Powers
 

@@ -1,8 +1,4 @@
----
-description: Concepts
----
-
-# Get started
+# Networking
 
 ## Getting Super Powers
 
