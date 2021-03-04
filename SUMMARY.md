@@ -11,6 +11,7 @@
 * [Commands](linux/commands/README.md)
   * [Finding files and directories](linux/commands/finding-files-and-directories.md)
 * [Resumo do dia](linux/resumo-do-dia/README.md)
+  * [Untitled](linux/resumo-do-dia/untitled.md)
   * [04/03/2021](linux/resumo-do-dia/04-03-2012.md)
 * [System Configuration](linux/system-configuration/README.md)
   * [Core services](linux/system-configuration/core-services.md)
