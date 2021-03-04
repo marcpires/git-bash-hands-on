@@ -23,7 +23,8 @@
 * [Initialize a repo](git/initialize-a-repo.md)
 * [Working with repos](git/working-with-repos.md)
 * [Branching](git/branching.md)
-* [Resumo de atividades 24/12/2020](git/resumo-de-atividades-24-12-2020.md)
+* [Resumo](git/resumo/README.md)
+  * [24/12/2020](git/resumo/resumo-de-atividades-24-12-2020.md)
 
 ## Networking
 
