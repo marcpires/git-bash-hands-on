@@ -14,7 +14,7 @@
 
 ## Git
 
-* [Untitled](git/untitled.md)
+* [Basics](git/untitled.md)
 * [Resumo de atividades 24/12/2020](git/resumo-de-atividades-24-12-2020.md)
 
 ## Networking
