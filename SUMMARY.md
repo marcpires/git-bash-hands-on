@@ -1,13 +1,18 @@
 # Table of contents
 
 * [DevOps hands-on](README.md)
+* [Resumo do dia](resumo-do-dia.md)
 
 ## Linux
 
-* [Get started](linux/untitled.md)
-* [Basics and startup system](linux/basics-and-startup-system.md)
-* [Commands](linux/commands/README.md)
-  * [Finding files and directories](linux/commands/finding-files-and-directories.md)
+* [04/03/2012](linux/04-03-2012.md)
+* [Get started](linux/untitled/README.md)
+  * [Common commands](linux/untitled/common-commands.md)
+* [Basics and startup system](linux/basics-and-startup-system/README.md)
+  * [Branching](linux/basics-and-startup-system/branching.md)
+* [Commands](linux/commands.md)
+* [Resumo do dia](linux/resumo-do-dia/README.md)
+  * [Finding files and directories](linux/resumo-do-dia/finding-files-and-directories.md)
 * [System Configuration](linux/system-configuration/README.md)
   * [Core services](linux/system-configuration/core-services.md)
   * [Graphical Interface](linux/system-configuration/graphical-interface.md)
