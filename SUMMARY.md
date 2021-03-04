@@ -6,6 +6,8 @@
 
 * [Get started](linux/untitled.md)
 * [Basics and startup system](linux/basics-and-startup-system.md)
+* [Commands](linux/commands/README.md)
+  * [Finding files and directories](linux/commands/finding-files-and-directories.md)
 * [System Configuration](linux/system-configuration/README.md)
   * [Core services](linux/system-configuration/core-services.md)
   * [Graphical Interface](linux/system-configuration/graphical-interface.md)
