@@ -6,6 +6,7 @@
 
 * [Get started](linux/untitled.md)
 * [Basics and startup system](linux/basics-and-startup-system.md)
+* [System Configuration](linux/system-configuration.md)
 
 ## Git
 
