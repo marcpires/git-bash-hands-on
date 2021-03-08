@@ -6,7 +6,7 @@
 
 ### Alteração na TASK cleanvm
 
-* Editamos uma função dentro do arquivo MAKEFILE
+* Editamos uma função dentro do arquivo Makefile
 
 
 
