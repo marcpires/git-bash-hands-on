@@ -2,7 +2,7 @@
 
 ## Tópicos estudados
 
-* **Alterações no MAKEFILE - TASK: cleanvm**
+* **Alterações no Makefile - TASK: cleanvm**
 
 ### Alteração na TASK cleanvm
 
