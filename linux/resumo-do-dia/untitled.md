@@ -2,9 +2,9 @@
 
 ## Tópicos estudados
 
-* **Alterações no MAKEFILE - TASK: Cleanvm**
+* **Alterações no MAKEFILE - TASK: cleanvm**
 
-### Alteração na TASK Cleanvm
+### Alteração na TASK cleanvm
 
 * Editamos uma função dentro do arquivo MAKEFILE
 
