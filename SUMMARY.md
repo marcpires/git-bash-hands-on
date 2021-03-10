@@ -14,6 +14,7 @@
   * [Core services](linux/system-configuration/core-services.md)
   * [Graphical Interface](linux/system-configuration/graphical-interface.md)
 * [Resumo do dia](linux/resumo-do-dia/README.md)
+  * [09/03/2021](linux/resumo-do-dia/09-03-2021.md)
   * [05/03/2021](linux/resumo-do-dia/untitled.md)
   * [04/03/2021](linux/resumo-do-dia/04-03-2012.md)
 
