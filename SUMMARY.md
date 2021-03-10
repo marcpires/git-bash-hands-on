@@ -17,6 +17,10 @@
   * [05/03/2021](linux/resumo-do-dia/untitled.md)
   * [04/03/2021](linux/resumo-do-dia/04-03-2012.md)
 
+---
+
+* [Tarefas](tarefas.md)
+
 ## Git
 
 * [Basics](git/untitled.md)
