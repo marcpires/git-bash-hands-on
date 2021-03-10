@@ -19,7 +19,7 @@
 
 ---
 
-* [Tarefas](tarefas.md)
+* [Tasks](tarefas.md)
 
 ## Git
 
