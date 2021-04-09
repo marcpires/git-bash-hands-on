@@ -23,7 +23,8 @@
 
 ---
 
-* [Tasks](tarefas.md)
+* [Tasks](tarefas/README.md)
+  * [symbolic and hard links labs](tarefas/symbolic-and-hard-links-labs.md)
 
 ## Git
 
