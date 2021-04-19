@@ -18,6 +18,10 @@ sudo apt install -y python3
 sudo apt-get install python3-venv
 ```
 
+```shell
+sudo snap install multipass
+```
+
 ### Installing Ansible
 
 `Ubuntu`
@@ -28,6 +32,10 @@ python3 -m venv ./iac/ansible/venv
 
 ```shell
 source ./iac/ansible/venv/bin/activate
+```
+
+```shell
+pip install pip --upgrade    
 ```
 
 ```shell

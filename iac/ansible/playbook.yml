@@ -1,0 +1,17 @@
+---
+#inventory host target
+- hosts: ansible_labs
+  become: yes
+  tasks:
+  - name: udate package list
+    shell: apt update
+
+  - name: install nginx web server
+    package:
+      name: nginx
+      state: present
+  
+  - name: Copy nginx index page
+    copy:
+      src: nginx/index.html
+      dest: /var/www/html
