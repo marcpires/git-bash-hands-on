@@ -1,68 +1,77 @@
-Requirements
-    - Infra
-        - Go Lang
-            
-        - I need Downlaod the file.
-             - https://docs.ansible.com/ansible/2.8/modules/unarchive_module.html#examples 
-             
+            Requirements
 
-        - Docker(package)
+            Infra
+            Golang
+            * param:
+                define version (https://golang.org/dl/go1.16.3.linux-amd64.tar.gz)
+                installation path
+                platform (target Linux)
+                
+            * Actions
+                fetch distribution file from site
+                uncompress file
+                move it to installation path
+                add go to system path
+            
+            Docker (package)
                 remove old version (docker docker-engine docker.io containerd runc)
-                add packages
-                  ubuntu:
-                    apt-transport-https
-                    ca-certificates
-                    curl
-                    gnupg
-                    lsb-release
-                  Add gpg key
-                    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-                    docker-archive-keyring.gpg
+                Add packages
+                    Ubuntu:
+                        apt-transport-https
+                        ca-certificates
+                        curl
+                        gnupg 
+                        lsb-release
+                    Add gpg key (differ from Debian)
+                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
                 Setup repo
                 Update
-                Install docker
+                install docker
                     can specify version
-                        docker-ce=<VERSION_STRING>
-                        docker-ca
-
-
-                  CentOS:
+                    docker-ce=<VERSION_STRING>
+                    docker-ce-cli=<VERSION_STRING>
+                    containerd.io
+                add user to docker group
+                    which users ??
+                CentOS:
                     remove packages
-                       docker-client
-                       docker-client \
-                       docker-client-latest \
-                       docker-common \
-                       docker-latest \
-                       docker-latest-logrotate \
-                       docker-logrotate \
-                       docker-engine
-                    Install package (fedora dnf -y install dnf-plugins-core)
-                        yum-utils
+                    docker
+                    docker-client
+                    docker-client-latest
+                    docker-common
+                    docker-latest
+                    docker-latest-logrotate
+                    docker-logrotate
+                    docker-engine
+                    install package (fedora dnf -y install dnf-plugins-core)
+                    yum-utils
                     add repo (Differ from Fedora)
-                    enable repo (Optional)
+                    enable repo (optional)
                     install docker
                     enable docker (service docker)
                     add user to docker
 
+            docker-compose
+            download binary from https://github.com/docker/compose/releases/download/
+                ex: Bolt
+                curl -L "https://github.com/docker/compose/releases/download/$PT_release/docker-compose-$(uname -s)-$(uname -m)" -o $PT_path/docker-compose
+            specify version
+            installation path (/usr/local/bin)
+            set permissions
+            
+
+            Tools:
+            howtizer
+            dnammer
+            flamethrower
+
+            Metrics:
+                Elatic search
+                Kibana
 
 
+            ansible -i iac/ansible/hosts -m ansible.builtin.setup ansible_facts
              - https://docs.ansible.com/ansible/2.8/modules/list_of_packaging_modules.html
              - https://docs.ansible.com/ansible/2.8/modules/apt_module.html#examples
 
 
-        - Docker-compose
-            download binary from https://github.com/docker/compose/release/download/
-                ex: Bolt
-                curl -L "https://github.com/docker/compose/release/download/$PT_release/docker
-            specify version
-            specify version
-
-
-             - https://docs.ansible.com/ansible/2.8/modules/docker_compose_module.html#examples
-
-    tools
-        - Flamethrower
-        - Dhammer
-        - Howitzer
-
-Analisar os requisitos de infra e relacionar com os modulos ansible para poder criar o ambiente.
