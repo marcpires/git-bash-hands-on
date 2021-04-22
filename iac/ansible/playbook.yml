@@ -1,2 +1,27 @@
 ---
-- hosts: ansible_labs
+- hosts: all
+  become: yes
+  tasks:
+  - name: Debug
+    ansible.builtin.debug:
+     msg: "{{ ansible_lsb.id | lower }}" # Here I use a function (filters) to set ansible_lsb.id value to lower case
+     # You can use this when adding the Docker repo url for Ubuntu/Debian, CentOS/Fedora
+     # 2 tasks only covers 4 distributions
+     # Use Ansible facts and conditionals
+
+  - name: Get golang
+    ansible.builtin.unarchive:
+      #TODO: user ansible_system to compose tar name. lowercase
+      #TODO: Check if we can use ansible_userspace_bits to compose tar name
+      src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
+      dest: /usr/local/
+      remote_src: yes
+
+  - name: Update system path
+    ansible.builtin.lineinfile:
+     path: /etc/environment
+     line: PATH="$PATH:/usr/local/go/bin"
+     backup: yes
+
+  # Docker
+
