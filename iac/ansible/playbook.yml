@@ -10,28 +10,79 @@
      # 2 tasks only covers 4 distributions
      # Use Ansible facts and conditionals
 
-  - name: Get golang
+  - name: Verify if Golang is installed
+    ansible.builtin.stat:
+      path: /usr/local/go/bin/go
+    register: go
+     
+  - name: Install golang {{ go_version }}
     ansible.builtin.unarchive:
-      #TODO: user ansible_system to compose tar name. lowercase
-      #TODO: Check if we can use ansible_userspace_bits to compose tar name
       src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
       dest: /usr/local/
       remote_src: yes
-    when: "{{ ansible_lsb.id | lower }}" == "ubuntu"
+    when: go.stat.exists == False
 
   - name: Update system path
     ansible.builtin.lineinfile:
      path: /etc/environment
-     line: PATH="$PATH:/usr/local/go/bin"
+     line: PATH="$PATH:/bin:/usr/bin:/usr/local/go/bin"
      backup: yes
 
-  - name: Copy Ansible logo
-    copy:
-      src: nginx/ansible.jpg
-      dest: /var/www/html/ansible.jpg
-      mode: u=rwx,g=r,o=r
+  - name: Get environment var values
+    # Why not command instead of shell ?
+    # 1. operations like > | ; & does not work
+    # 2. Variables like $HOSTNAME will not work
+    ansible.builtin.shell: '. /etc/environment && echo $PATH'
+    register: envs_vars
 
-  - name: Copy mysql config
-    copy:
-     src: mysql/config
-     dest: /tmp/config
+  - name: Get env vars values
+    ansible.builtin.debug:
+      msg: "Variable values {{ envs_vars.stdout }}"
+
+ # Docker
+  - name: Remove old Docker packages
+    apt:
+      name: "{{ packages }}"
+      state: absent
+    vars:
+      packages:
+      - docker
+      - docker.io
+      - containerd
+      - runc
+    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
+    register: docker_packages
+
+  - name: Setup repository packages
+    package:
+     name: "{{ packages }}"
+     state: present
+    vars:
+      packages:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+      - local-apt-repository
+    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
+    register: repo_packages
+
+  - name: Add Docker GPG key
+    ansible.builtin.apt_key:
+      url: https://download.docker.com/linux/{{ ansible_lsb.id | lower }}/gpg
+      state: present
+    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
+    register: gpg_repo
+
+  - name: Add docker_packages Repository
+    ansible.builtin.apt_repo:
+      repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_lsb.codename }} stable"
+      state: present
+    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
+    register: docker
+
+  - name: Debug
+    ansible.builtin.debug:
+     msg: "{{ docker }}"
+      
