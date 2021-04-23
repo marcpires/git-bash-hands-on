@@ -8,56 +8,57 @@
                 platform (target Linux)
                 
             * Actions
-                fetch distribution file from site
-                uncompress file
-                move it to installation path
-                add go to system path
+                fetch distribution file from site ----> fetch – Fetch files from remote nodes
+                uncompress file ----------------------> unarchive – Unpacks an archive after (optionally) copying it from the local machine
+                move it to installation path ---------> archive – Creates a compressed archive of one or more files or trees
+                add go to system path ----------------> archive – Creates a compressed archive of one or more files or trees ??
             
             Docker (package)
                 remove old version (docker docker-engine docker.io containerd runc)
                 Add packages
                     Ubuntu:
-                        apt-transport-https
-                        ca-certificates
-                        curl
-                        gnupg 
-                        lsb-release
+                        apt-transport-https ----> apt – Manages apt-packages
+                        ca-certificates --------> get_certificate – Get a certificate from a host:port
+                        curl -------------------> shell – Execute shell commands on targets
+                        gnupg ------------------> 
+                        lsb-release ------------>
                     Add gpg key (differ from Debian)
-                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg ----> shell – Execute shell commands on targets
+                         
                 Setup repo
                 Update
-                install docker
-                    can specify version
-                    docker-ce=<VERSION_STRING>
-                    docker-ce-cli=<VERSION_STRING>
-                    containerd.io
-                add user to docker group
-                    which users ??
+                install docker ---------------------------> apt – Manages apt-packages
+                    can specify version 
+                    docker-ce=<VERSION_STRING> 
+                    docker-ce-cli=<VERSION_STRING> 
+                    containerd.io 
+                add user to docker group 
+                    which users ?? ----------------------->
                 CentOS:
-                    remove packages
+                    remove packages -------------------------> yum – Manages packages with the yum package manager
                     docker
-                    docker-client
-                    docker-client-latest
-                    docker-common
-                    docker-latest
-                    docker-latest-logrotate
-                    docker-logrotate
-                    docker-engine
-                    install package (fedora dnf -y install dnf-plugins-core)
-                    yum-utils
-                    add repo (Differ from Fedora)
-                    enable repo (optional)
-                    install docker
-                    enable docker (service docker)
-                    add user to docker
+                    docker-client 
+                    docker-client-latest 
+                    docker-common 
+                    docker-latest 
+                    docker-latest-logrotate 
+                    docker-logrotate 
+                    docker-engine 
+                    install package (fedora dnf -y install dnf-plugins-core) -------------> dnf – Manages packages with the dnf package manager
+                    yum-utils ------------------------------------------------------------> yum – Manages packages with the yum package manager
+                    add repo (Differ from Fedora) ----------------------------------------> apt_repo – Manage APT repositories via apt-repo
+                    enable repo (optional) -----------------------------------------------> 
+                    install docker -------------------------------------------------------> yum – Manages packages with the yum package manager
+                    enable docker (service docker) ---------------------------------------> ??
+                    add user to docker ---------------------------------------------------> ??
 
             docker-compose
             download binary from https://github.com/docker/compose/releases/download/
                 ex: Bolt
                 curl -L "https://github.com/docker/compose/releases/download/$PT_release/docker-compose-$(uname -s)-$(uname -m)" -o $PT_path/docker-compose
             specify version
-            installation path (/usr/local/bin)
-            set permissions
+            installation path (/usr/local/bin) -------------------------> archive – Creates a compressed archive of one or more files or trees
+            set permissions --------------------------------------------> 
             
 
             Tools:
