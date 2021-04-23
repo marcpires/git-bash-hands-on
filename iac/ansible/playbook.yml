@@ -2,6 +2,7 @@
 - hosts: all
   become: yes
   tasks:
+
   - name: Debug
     ansible.builtin.debug:
      msg: "{{ ansible_lsb.id | lower }}" # Here I use a function (filters) to set ansible_lsb.id value to lower case
@@ -16,6 +17,7 @@
       src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
       dest: /usr/local/
       remote_src: yes
+    when: "{{ ansible_lsb.id | lower }}" == "ubuntu"
 
   - name: Update system path
     ansible.builtin.lineinfile:
@@ -23,5 +25,13 @@
      line: PATH="$PATH:/usr/local/go/bin"
      backup: yes
 
-  # Docker
+  - name: Copy Ansible logo
+    copy:
+      src: nginx/ansible.jpg
+      dest: /var/www/html/ansible.jpg
+      mode: u=rwx,g=r,o=r
 
+  - name: Copy mysql config
+    copy:
+     src: mysql/config
+     dest: /tmp/config
