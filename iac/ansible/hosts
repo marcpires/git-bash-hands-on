@@ -9,7 +9,7 @@
 #   - A hostname/ip can be a member of multiple groups
 
 [ansible_labs]
-10.86.133.31 ansible_user=ubuntu
+10.76.189.140 ansible_user=ubuntu
 
 [other]
 10.86.133.238 ansible_user=ubuntu
