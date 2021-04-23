@@ -71,18 +71,36 @@
   - name: Add Docker GPG key
     ansible.builtin.apt_key:
       url: https://download.docker.com/linux/{{ ansible_lsb.id | lower }}/gpg
+      id: 7EA0A9C3F273FCD8
+      keyring: /usr/share/keyrings/docker-archive-keyring.gpg
       state: present
     when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
     register: gpg_repo
 
-  - name: Add docker_packages Repository
-    ansible.builtin.apt_repo:
+  - name: Add Docker Repository
+    ansible.builtin.apt_repository:
       repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_lsb.codename }} stable"
       state: present
     when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
-    register: docker
+    register: docker_repo
+
+  - name: Update repository list
+    ansible.builtin.apt:
+      update_cache: yes
+    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
+    
+  - name: Install Docker
+    ansible.builtin.package:
+     name: "{{ packages }}"
+     state: present
+    vars:
+      packages:
+        - docker-ce 
+        - docker-ce-cli 
+        - containerd.io
+    register: docker_install
 
   - name: Debug
     ansible.builtin.debug:
-     msg: "{{ docker }}"
+     msg: "{{ docker_install }}"
       
