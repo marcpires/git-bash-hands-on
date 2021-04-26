@@ -1,4 +1,5 @@
 *venv
 .cache
-.build.sh
-.iac
+
+*build.sh
+*iac
