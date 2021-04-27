@@ -1,6 +1,5 @@
 ---
 # tasks file for iac/ansible/roles/docker
-
   - name: Remove old Docker packages
     apt: 
       name: "{{ docker_packages_list }}"
