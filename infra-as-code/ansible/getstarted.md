@@ -12,8 +12,8 @@ for a novice to get started.
 - ### We can also see that Ansible connects us to its nodes and runs small programs, which are called "Ansible Modules". These programs were created to be resource models of the desired state of the system. Ansible runs these modules (by SSH by default) and removes them when finished.
 
 ## **Relevant information of the ANSIBLE:**
-
-
+- ### Ansible is a tool to optimize the infrastructure of an environment, in which we can have a "playbook.yml" that will configure tasks in any operating system.
 
 
 ## Explain Idempotence on **Ansible**
+
