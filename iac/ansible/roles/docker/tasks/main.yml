@@ -3,13 +3,13 @@
 
   - name: Remove old Docker packages
     apt: 
-      name: "{{ install_packages_list }}"
+      name: "{{ docker_packages_list }}"
       state: absent
     register: docker_packages
 
   - name: Setup repository packages
     package:
-     name: "{{ install_packages_list }}"
+     name: "{{ docker_packages_list }}"
      state: present
     register: repo_packages
 
