@@ -1,22 +1,14 @@
 ---
-# tasks file for iac/ansible/roles/golang
-
-- name: Verify if Golang is installed
-  ansible.builtin.stat:
-    path: "{{ go_install_path }}/go/bin/go"
-  register: go
-    
-- name: Install golang {{ go_version }}
-  ansible.builtin.unarchive:
-    src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
-    dest: "{{ go_install_path }}"
-    remote_src: yes
-  when: go.stat.exists == False
-
-- name: Update system path
-  ansible.builtin.lineinfile:
-    path: /etc/environment
-    line: PATH="$PATH:/bin:/usr/bin:{{ go_install_path }}/go/bin"
-    backup: yes
-  notify: 
-    - update environment
+# tasks file for iac-labs/ansible/roles/golang
+  - name: Verify if Golang is installed
+    ansible.builtin.stat:
+      path: "{{ go_install_path }}/go/bin/go"
+    register: go
+     
+  - name: Install golang "{{ go_version }}"
+    notify: update environment
+    ansible.builtin.unarchive:
+      src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
+      dest: "{{ go_install_path }}"
+      remote_src: yes
+    when: go.stat.exists == False
