@@ -3,6 +3,7 @@
   become: yes
   vars_files:
   - variables.yml
+  - vars/version_debian/default.yml
 
   handlers:
     - name: update environment
@@ -41,35 +42,23 @@
   #   ansible.builtin.debug:
   #     msg: "Variable values {{ envs_vars.stdout }}"
 
+  - name: with_items
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ install_packages_list }}"
+
  # Docker
   - name: Remove old Docker packages
-    apt:
-      name: "{{ packages }}"
+    apt: 
+      name: "{{ install_packages_list }}"
       state: absent
-    vars:
-      packages:
-      - docker
-      - docker.io
-      - containerd
-      - runc
-    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian"
-    register: docker_packages
+      register: docker_packages
 
   - name: Setup repository packages
     package:
-     name: "{{ packages }}"
+     name: "{{ install_packages_list }}"
      state: present
-    vars: # How can I update this task to pass CentOS/Fedora package names ?
-          # package is distribution agnostic.
-      packages:
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - gnupg
-      - lsb-release
-      - local-apt-repository
-    when: ansible_lsb.id | lower == "ubuntu" or ansible_lsb.id | lower == "debian" # This should be removed.
-    register: repo_packages
+     register: repo_packages
 
   - name: Add Docker GPG key
     ansible.builtin.apt_key:
