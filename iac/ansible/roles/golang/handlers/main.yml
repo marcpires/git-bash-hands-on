@@ -1,0 +1,7 @@
+---
+# handlers file for iac/ansible/roles/golang
+
+- name: update environment
+  ansible.builtin.shell: '. /etc/environment && echo $PATH'
+  register: envs_vars
+
