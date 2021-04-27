@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  vars_files: 
+  - "vars/packages_{{ ansible_os_family }}.yml"
+  
+  handlers:
+    - name: update environment
+      ansible.builtin.shell: '. /etc/environment && echo $PATH'
+      register: envs_vars
+ 
+  roles:
+    - golang
+    - docker
