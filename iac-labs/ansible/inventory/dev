@@ -8,9 +8,10 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
-10.86.133.238
-10.86.133.129
 
 [ansible_labs]
 10.76.189.140
 
+[other]
+10.86.133.238
+10.86.133.129
