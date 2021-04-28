@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   vars_files: 
-  - "vars/packages_{{ ansible_os_family }}.yml"
+  - "vars/packages_{{ ansible_os_family | lower }}.yml"
 
   roles:
     - golang
