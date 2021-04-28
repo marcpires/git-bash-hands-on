@@ -1,11 +1,10 @@
 ---
 # tasks file for iac/ansible/roles/docker-compose
-  - name: Verify if docker-compose is installed
+  - name: Verify if docker_compose is installed
     ansible.builtin.stat:
-      path: "{{ docker-compose_download_path }}"
-    register: docker-compose
+      path: "{{ docker_compose_download_path }}"
+    register: docker_compose
      
-  - name: Install docker-compose
-    notify: update environment
-    ansible.builtin.shell: curl -L "https://github.com/docker/compose/releases/download/{{ docker-compose_version }}/docker-compose-$(uname -s)-$(uname -m)" -o {{ docker-compose_download_path }}
-    when: docker-compose.stat.exists == False
+  - name: Install docker_compose {{ docker_compose_version }}
+    ansible.builtin.shell: curl -L "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-$(uname -s)-$(uname -m)" -o "{{ docker_compose_download_path }}/docker-compose"
+    when: docker_compose.stat.exists == False
