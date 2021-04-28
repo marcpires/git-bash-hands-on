@@ -5,6 +5,7 @@
   - "vars/packages_{{ ansible_os_family }}.yml"
 
   roles:
-    #- golang
-    #- docker
+    - golang
+    - docker
     - docker-compose
+    - update-environment

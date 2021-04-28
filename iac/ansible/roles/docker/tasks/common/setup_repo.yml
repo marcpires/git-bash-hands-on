@@ -1,0 +1,7 @@
+
+---
+- name: Setup repository packages
+  package:
+    name: "{{ docker_packages_list }}"
+    state: present
+  register: repo_packages
