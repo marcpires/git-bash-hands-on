@@ -6,5 +6,5 @@
     register: docker_compose
      
   - name: Install docker_compose {{ docker_compose_version }}
-    ansible.builtin.shell: curl -L "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-$(uname -s)-$(uname -m)" -o "{{ docker_compose_download_path }}/docker-compose"
+    ansible.builtin.shell: curl -L "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-$(uname -s)-$(uname -m)" -o "{{ docker_compose_download_path }}"
     when: docker_compose.stat.exists == False
