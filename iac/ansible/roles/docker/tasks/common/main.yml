@@ -1,6 +1,0 @@
----
-- name: Install Docker
-  ansible.builtin.package:
-    name: "{{ docker_packages_list }}"
-    state: present
-  register: docker_install

@@ -11,10 +11,6 @@ docker_old_packages_list:
 - docker-engine
 
 docker_packages_list:
-- docker
-- docker.io
-- containerd
-- runc
-
-repo_packages_list:
-- dnf-plugins-core
+- docker-ce
+- docker-ce-cli
+- containerd.io

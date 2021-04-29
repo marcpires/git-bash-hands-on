@@ -1,5 +1,5 @@
 ---
- - name: Remove old Docker packages
+ - name: Remove old Docker Packages
    apt: 
     name: "{{ docker_packages_list }}"
     state: absent

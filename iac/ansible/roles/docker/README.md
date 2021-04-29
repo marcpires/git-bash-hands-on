@@ -45,3 +45,4 @@ Author Information
 ------------------
 
 Alécio Rocha (arocha@daitan.com)
+MArcelo Pires (mpires@daitan.com)

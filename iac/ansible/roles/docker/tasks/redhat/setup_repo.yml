@@ -1,6 +1,0 @@
----
-- name: Setup repository packages
-  package:
-    name: "{{ repo_packages_list }}"
-    state: present
-  register: repo_packages
