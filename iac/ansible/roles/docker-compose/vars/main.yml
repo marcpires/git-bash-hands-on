@@ -1,0 +1,4 @@
+---
+# vars file for iac/ansible/roles/docker-compose
+docker_compose_version: 1.29.1
+docker_compose_download_path: /usr/local/bin/docker-compose
