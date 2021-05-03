@@ -53,4 +53,14 @@ $ multipass list
 ```
 
 ### Update ansible inventory with instance ip
+```shell
+[ansible_labs]
+192.168.122.203
+```
 
+## Running Ansible Playbook
+```shell
+ansible-playbook -i iac/ansible/inventory/dev \
+ -e 'go_version=1.16.3' --limit ansible_labs_fedora \
+ -e 'install_flame=True' ./iac/ansible/playbook.yml
+```
