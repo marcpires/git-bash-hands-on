@@ -1,0 +1,16 @@
+docker_old_packages_list:
+- docker
+- docker-client
+- docker-client-latest
+- docker-common
+- docker-latest
+- docker-latest-logrotate
+- docker-logrotate
+- docker-selinux
+- docker-engine-linux
+- docker-engine
+
+docker_packages_list:
+- docker-ce
+- docker-ce-cli
+- containerd.io
