@@ -1,0 +1,6 @@
+---
+ - name: Remove old Docker Packages
+   apt: 
+    name: "{{ docker_packages_list }}"
+    state: absent
+   register: docker_packages
