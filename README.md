@@ -50,6 +50,6 @@ Step by step guide for DevOps role
 * [Ansible](infra-as-code/ansible.md)
 
 ## Labs
- * [Ansible]((infra-as-code/iac-labs/README.md)
+ * [Ansible](infra-as-code/iac-labs/README.md)
 
 
