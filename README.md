@@ -4,15 +4,52 @@
 
 Step by step guide for DevOps role 
 
-## Content
- * [Git](git)
- * [Linux](linux)
- * Network
- * Containers
- * [Infrastructue as code](infra-as-code)
- * Virtualization
- * Cloud
+
+# Table of contents
+
+## Linux
+
+* [Get started](linux/untitled/README.md)
+  * [Common commands](linux/untitled/common-commands.md)
+* [Basics and startup system](linux/basics-and-startup-system.md)
+* [Commands](linux/commands/README.md)
+  * [Finding files and directories](linux/commands/finding-files-and-directories.md)
+* [System Configuration](linux/system-configuration/README.md)
+  * [Core services](linux/system-configuration/core-services.md)
+  * [Graphical Interface](linux/system-configuration/graphical-interface.md)
+
+---
+
+* [Tasks](tarefas/README.md)
+  * [symbolic and hard links labs](tarefas/symbolic-and-hard-links-labs.md)
+
+## Git
+
+* [Basics](git/untitled.md)
+* [Initialize a repo](git/initialize-a-repo.md)
+* [Working with repos](git/working-with-repos.md)
+* [Branching](git/branching.md)
+
+## Networking
+
+* TODO
+
+## Containers
+
+
+## Virtualization
+
+* TODO
+
+## Metrics and Logs
+
+* TODO
+
+## Infra as code
+
+* [Ansible](infra-as-code/ansible.md)
 
 ## Labs
+ * [Ansible]((infra-as-code/iac-labs/README.md)
 
 
