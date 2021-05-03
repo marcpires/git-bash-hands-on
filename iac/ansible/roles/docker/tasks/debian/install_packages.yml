@@ -1,6 +1,0 @@
----
-- name: Install docker ce
-  package:
-    name: "{{ docker_packages_list }}"
-    state: present
-  register: repo_packages

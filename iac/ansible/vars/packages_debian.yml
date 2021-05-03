@@ -1,5 +1,0 @@
-docker_packages_list:
-- docker
-- docker.io
-- containerd
-- runc

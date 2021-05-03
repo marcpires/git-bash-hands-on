@@ -1,5 +1,0 @@
----
-#- include_tasks: howitzer.yml
-- include_tasks: flame.yml
-#- include_tasks: dhammer.yml
-
