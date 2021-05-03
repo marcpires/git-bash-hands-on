@@ -8,8 +8,8 @@
   ansible.builtin.pip:
     name: docker
 
-# - name: Get flamethrower image
-#   ansible.builtin.docker_image:
-#    - name: ns1labs/flame
-#      tag: "{{ flame_image_tag }}"
-#      source: pull
+- name: Get flamethrower image
+  ansible.builtin.docker_image:
+   - name: ns1labs/flame
+     tag: "{{ flame_image_tag }}"
+     source: pull

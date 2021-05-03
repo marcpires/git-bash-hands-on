@@ -1,5 +1,4 @@
 ---
-# tasks file for iac/ansible/roles/docker-compose
   - name: Verify if docker_compose is installed
     ansible.builtin.stat:
       path: "{{ docker_compose_download_path }}"
@@ -16,6 +15,3 @@
     ansible.builtin.get_url:
       url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_machine }}"
       dest: "{{ docker_compose_download_path }}"
-   
-
-
