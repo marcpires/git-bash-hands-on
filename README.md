@@ -1,8 +1,8 @@
 # DevOps hands-on
 
-## Getting Super Powers
+**Description:**
 
-Becoming a super hero is a fairly straight forward process:
+Step by step guide for DevOps role 
 
 ## Content
  * [Git](git)
