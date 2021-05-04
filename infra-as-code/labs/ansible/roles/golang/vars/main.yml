@@ -1,0 +1,4 @@
+---
+# vars file for iac/ansible/roles/golang
+go_version: 1.16.3
+go_install_path: /usr/local
