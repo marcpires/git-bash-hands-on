@@ -1,5 +1,5 @@
 ---
-name: Molecule Test
+name: RoleTests
 on:
   push:
     branches: [ main ]
