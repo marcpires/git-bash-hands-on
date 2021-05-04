@@ -18,6 +18,8 @@ Step by step guide for DevOps role
 * [System Configuration](linux/system-configuration/README.md)
   * [Core services](linux/system-configuration/core-services.md)
   * [Graphical Interface](linux/system-configuration/graphical-interface.md)
+* [Labs](linux/labs/README.md)
+  
 
 ---
 
@@ -49,8 +51,7 @@ Step by step guide for DevOps role
 ## Infra as code
 
 * [Ansible](infra-as-code/ansible.md)
+* [Labs](infra-as-code/labs/ansible/README.md)
 
-## Labs
- * [Ansible](infra-as-code/iac-labs/README.md)
 
 
