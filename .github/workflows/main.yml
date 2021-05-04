@@ -28,5 +28,5 @@ jobs:
           python3 -m pip install -r ./devops-hands-on/infra-as-code/labs/ansible/requirements.txt
       - name: Role Test
         run: |
-          cd /devops-hands-on/infra-as-code/labs/ansible
+          cd ./devops-hands-on/infra-as-code/labs/ansible
           molecule test
