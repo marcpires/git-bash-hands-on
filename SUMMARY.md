@@ -1,12 +1,7 @@
-# DevOps hands-on
-![example workflow](https://github.com/marcpires/devops-hands-on/workflows/RoleTests/badge.svg)
-
-**Description:**
-
-Step by step guide for DevOps role 
-
-
 # Table of contents
+
+* [DevOps hands-on](README.md)
+* [Resumo do dia](resumo-do-dia.md)
 
 ## Linux
 
@@ -18,6 +13,13 @@ Step by step guide for DevOps role
 * [System Configuration](linux/system-configuration/README.md)
   * [Core services](linux/system-configuration/core-services.md)
   * [Graphical Interface](linux/system-configuration/graphical-interface.md)
+* [Resumo do dia](linux/resumo-do-dia/README.md)
+  * [12/03/2021](linux/resumo-do-dia/12-03-2021.md)
+  * [11/03/2021](linux/resumo-do-dia/11-03-2021.md)
+  * [10/03/2021](linux/resumo-do-dia/10-03-2021.md)
+  * [09/03/2021](linux/resumo-do-dia/09-03-2021.md)
+  * [05/03/2021](linux/resumo-do-dia/untitled.md)
+  * [04/03/2021](linux/resumo-do-dia/04-03-2012.md)
 
 ---
 
@@ -30,27 +32,32 @@ Step by step guide for DevOps role
 * [Initialize a repo](git/initialize-a-repo.md)
 * [Working with repos](git/working-with-repos.md)
 * [Branching](git/branching.md)
+* [Resumo](git/resumo/README.md)
+  * [24/12/2020](git/resumo/resumo-de-atividades-24-12-2020.md)
 
 ## Networking
 
-* TODO
+* [Networking](networking/networking.md)
 
 ## Containers
 
+* [Resumo do dia](containers/resumo-do-dia/README.md)
+  * [08/03/2021](containers/resumo-do-dia/08-03-2021.md)
 
 ## Virtualization
 
-* TODO
+* [Untitled](virtualization/untitled.md)
 
 ## Metrics and Logs
 
-* TODO
+* [Untitled](metrics-and-logs/untitled.md)
 
 ## Infra as code
 
 * [Ansible](infra-as-code/ansible.md)
+* [Terraform](infra-as-code/terraform.md)
 
-## Labs
- * [Ansible](infra-as-code/iac-labs/README.md)
+## Resumo Geral
 
+* [Untitled](resumo-geral/untitled.md)
 
