@@ -1,0 +1,4 @@
+---
+  - include_tasks: "tasks/{{ ansible_os_family | lower }}/remove_packages.yml"
+  - include_tasks: "tasks/{{ ansible_os_family | lower }}/add_repository.yml"
+  - include_tasks: "tasks/common/main.yml"

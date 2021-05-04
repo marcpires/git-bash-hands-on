@@ -1,0 +1,15 @@
+---
+- name: Install pip
+  ansible.builtin.package:
+    name: python3-pip
+    state: present
+
+- name: Install docker-api
+  ansible.builtin.pip:
+    name: docker
+
+- name: Get flamethrower image
+  ansible.builtin.docker_image:
+   - name: ns1labs/flame
+     tag: "{{ flame_image_tag }}"
+     source: pull

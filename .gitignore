@@ -1,0 +1,6 @@
+*venv
+*build.sh
+*hosts
+logs
+*.cache
+

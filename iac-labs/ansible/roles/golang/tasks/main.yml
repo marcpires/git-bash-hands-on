@@ -1,0 +1,17 @@
+---
+  - name: Verify if Golang is installed
+    ansible.builtin.stat:
+      path: "{{ go_install_path }}/go/bin/go"
+    register: go
+
+  - name: Remove Golang if installed  
+    ansible.builtin.file:
+      path: "{{ go_install_path }}/go"
+      state: absent
+    when: go.stat.exists == True
+
+  - name: Install golang "{{ go_version }}"
+    ansible.builtin.unarchive:
+      src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
+      dest: "{{ go_install_path }}"
+      remote_src: yes

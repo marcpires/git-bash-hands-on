@@ -1,0 +1,17 @@
+---
+  - name: Verify if docker_compose is installed
+    ansible.builtin.stat:
+      path: "{{ docker_compose_download_path }}"
+    register: docker_compose
+
+  - name: Remove docker_compose if installed
+    ansible.builtin.file:
+      path: "{{ docker_compose_download_path }}"
+      state: absent
+    when: docker_compose.stat.exists == True
+
+  - name: Install docker_compose {{ docker_compose_version }}
+    notify: executable_permissions
+    ansible.builtin.get_url:
+      url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_machine }}"
+      dest: "{{ docker_compose_download_path }}"

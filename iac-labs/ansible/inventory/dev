@@ -1,0 +1,23 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+
+[ansible_labs]
+10.86.133.31
+
+[ansible_labs_fedora]
+192.168.122.203
+
+[ansible_labs_centos]
+192.168.122.28
+
+[other]
+10.86.133.238
+10.86.133.129

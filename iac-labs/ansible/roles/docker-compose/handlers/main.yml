@@ -1,0 +1,6 @@
+---
+- name: executable_permissions
+  ansible.builtin.file:
+    path: "{{ docker_compose_download_path }}"
+    mode: u=rwx,g=rx,o=rx
+  register: exec_permis
