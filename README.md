@@ -1,5 +1,5 @@
 # DevOps hands-on
-![example workflow](https://github.com/marcpires/devops-hands-on/workflows/Molecule Test/badge.svg)
+![example workflow](https://github.com/marcpires/devops-hands-on/workflows/RoleTests/badge.svg)
 
 **Description:**
 
