@@ -1,5 +1,4 @@
 ---
-# tasks file for iac-labs/ansible/roles/golang
 - name: Verify if Golang is installed
   ansible.builtin.stat:
     path: "{{ go_install_path }}/go/bin/go"
