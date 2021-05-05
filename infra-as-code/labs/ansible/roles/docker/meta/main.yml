@@ -22,21 +22,21 @@ galaxy_info:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
   platforms:
-  - name: Fedora
-    versions:
-    - all
+    - name: Fedora
+      versions:
+        - all
 
-  - name: Centos
-    versions:
-    - all
+    - name: Centos
+      versions:
+        - all
 
-  - name: Ubuntu
-    versions:
-    - all
+    - name: Ubuntu
+      versions:
+        - all
 
-  - name: Debian
-    versions:
-    - all
+    - name: Debian
+      versions:
+        - all
 
   galaxy_tags: []
     # List tags for your role here, one per line. A tag is a keyword that describes
