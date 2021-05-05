@@ -15,4 +15,3 @@
     src: https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz
     dest: "{{ go_install_path }}"
     remote_src: yes
-
