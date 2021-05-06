@@ -7,6 +7,6 @@
   roles:
     - golang
     - docker
-    - docker-compose
-    - update-environment
-    - soak-tools
+    - docker_compose
+    - update_environment
+    - soak_tools
