@@ -8,7 +8,7 @@
   ansible.builtin.file:
     path: "{{ go_install_path }}/go"
     state: absent
-  when: go.stat.exists == True
+  when: go.stat.exists
 
 - name: Install golang "{{ go_version }}"
   ansible.builtin.unarchive:

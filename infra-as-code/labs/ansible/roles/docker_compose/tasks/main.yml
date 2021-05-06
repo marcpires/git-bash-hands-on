@@ -8,7 +8,7 @@
   ansible.builtin.file:
     path: "{{ docker_compose_download_path }}"
     state: absent
-  when: docker_compose.stat.exists == True
+  when: docker_compose.stat.exists
 
 - name: Install docker_compose {{ docker_compose_version }}
   notify: executable_permissions
