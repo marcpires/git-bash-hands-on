@@ -4,12 +4,9 @@
 
 - name: Include sub-task Remove_packages
   include_tasks: "tasks/{{ ansible_os_family | lower }}/remove_packages.yml"
-  when: ansible_os_family is defined
 
 - name: Include sub-task Add_repository
   include_tasks: "tasks/{{ ansible_os_family | lower }}/add_repository.yml"
-  when: ansible_os_family is defined
 
 - name: Include sub-task Install_packages
   include_tasks: "tasks/{{ ansible_os_family | lower }}/install_packages.yml"
-  when: ansible_os_family is defined
