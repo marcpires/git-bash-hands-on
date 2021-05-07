@@ -5,8 +5,8 @@
   - "vars/packages_{{ ansible_os_family | lower }}.yml"
 
   roles:
-    # - golang
+    - golang
     - docker
-    # - docker_compose
-    # - update_environment
-    # - soak_tools
+    - docker_compose
+    - update_environment
+    - soak_tools
