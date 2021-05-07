@@ -1,7 +1,7 @@
 ---
 - name: Add Repository
   ansible.builtin.apt_repository:
-    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_lsb.codename }} stable"
+    repo: "{{ repo_link }}"
     state: present
   register: docker_repo
 
