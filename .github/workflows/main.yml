@@ -16,15 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: molecule_demo
+          path: devops-hands-on
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
+          ls -l 
           python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt
-      - name: Test with molecule
+          python3 -m pip install -r ./devops-hands-on/infra-as-code/labs/ansible/requirements.txt
+      - name: Role Test
         run: |
+          cd ./devops-hands-on/infra-as-code/labs/ansible
           molecule test

@@ -1,0 +1,13 @@
+exclude_paths:
+  - .cache
+  - .github
+
+  mock_modules:
+  - zuul_return
+  # note the foo.bar is invalid as being neither a module or a collection
+  - fake_namespace.fake_collection.fake_module
+  - fake_namespace.fake_collection.fake_module.fake_submodule
+mock_roles:
+  - mocked_role
+  - author.role_name  # old standalone galaxy role
+  - fake_namespace.fake_collection.fake_role  # role within a collection
