@@ -1,2 +1,2 @@
 *.cache
-*infra-as-code
+*.venv
