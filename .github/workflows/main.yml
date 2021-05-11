@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -26,7 +26,7 @@ jobs:
           ls -l
           python3 -m pip install --upgrade pip
           python3 -m pip install -r ./devops-hands-on/infra-as-code/labs/ansible/requirements.txt
-      - name: Lint
+      - name: Lint playbook
         run: |
           cd ./devops-hands-on/infra-as-code/labs/ansible
           ansible-lint --progressive -p infra-as-code/labs/ansible/
