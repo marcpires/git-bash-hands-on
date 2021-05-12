@@ -1,6 +1,6 @@
 ---
 - name: Remove old Docker packages
-  dnf:
-   name: "{{ docker_old_packages_list }}"
+  yum:
+   name: "{{ docker_old_packages_list_centos }}"
    state: absent
   register: docker_packages

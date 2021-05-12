@@ -1,4 +1,4 @@
-docker_old_packages_list:
+docker_old_packages_list_fedora:
   - docker
   - docker-client
   - docker-client-latest
@@ -7,7 +7,17 @@ docker_old_packages_list:
   - docker-latest-logrotate
   - docker-logrotate
   - docker-selinux
-  - docker-engine-linux
+  - docker-engine-selinux
+  - docker-engine
+
+docker_old_packages_list_centos:
+  - docker-ce
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
   - docker-engine
 
 docker_packages_list:
