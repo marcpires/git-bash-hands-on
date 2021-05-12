@@ -5,3 +5,10 @@
     entry: trailing-whitespace-fixer
     language: python
     types: [text]
+
+-  id: check-yaml
+   name: check-yaml
+   description: Check yaml hook
+   entry: ansible-lint --progressive -p infra-as-code/labs/ansible/
+   language: python
+   types: [text]
