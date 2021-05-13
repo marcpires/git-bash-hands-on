@@ -1,4 +1,3 @@
-
 # Ansible get started
 
  ### **What is Ansible?**
