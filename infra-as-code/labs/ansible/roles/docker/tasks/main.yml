@@ -4,6 +4,16 @@
 
 - name: Include sub-task Remove_packages
   include_tasks: "tasks/{{ ansible_os_family | lower }}/remove_packages.yml"
+  when: ansible_facts['os_family'] == "Debian"
+  
+- name: debug
+  debug:
+    msg: "{{ ansible_distribution }}"
+    
+
+- name: Include sub-task Remove_packages Red-hat
+  include_tasks: "tasks/{{ ansible_os_family | lower }}/{{ ansible_distribution | lower }}/remove_packages.yml"
+  when: ansible_facts['os_family'] == "Redhat"
 
 - name: Include sub-task Add_repository
   include_tasks: "tasks/{{ ansible_os_family | lower }}/add_repository.yml"
