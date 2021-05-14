@@ -1,6 +1,13 @@
 ---
 - name: Install docker ce
-  package:
+  ansible.builtin.package:
     name: "{{ docker_packages_list }}"
     state: present
   register: repo_packages
+
+# Disable due to task bracking need futher investigate
+# - name: Start docker service
+#   ansible.builtin.systemd:
+#     name: docker
+#     enabled: yes
+#     masked: no

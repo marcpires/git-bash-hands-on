@@ -1,0 +1,13 @@
+---
+# PRIVILEG Monday
+- name: Go get Dhammer
+  shell: "go get -u github.com/ipchama/dhammer"
+  environment:
+    GOPATH: "{{ go_install_path }}/go/ }}"
+  register: gos
+ 
+
+- name: debug
+  debug:
+    msg: "{{ gos }}"
+
