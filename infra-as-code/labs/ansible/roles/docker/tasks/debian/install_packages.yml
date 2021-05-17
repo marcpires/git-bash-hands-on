@@ -5,9 +5,8 @@
     state: present
   register: repo_packages
 
-# Disable due to task bracking need futher investigate
-# - name: Start docker service
-#   ansible.builtin.systemd:
-#     name: docker
-#     enabled: yes
-#     masked: no
+- name: Start docker service
+  ansible.builtin.systemd:
+    name: docker
+    enabled: yes
+    state: started
