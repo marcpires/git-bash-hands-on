@@ -9,9 +9,12 @@
 #   - A hostname/ip can be a member of multiple groups
 #   - Add your hostnames or ip addresses  
 
-< add your hostname >
-< add your IP>
+[ansible_labs]
+10.76.189.140 
 
-< add your hostname_2 >
-< add your IP_2 >
+[ansible_labs_fedora]
+192.168.122.203
+
+[ansible_labs_centos]
+192.168.122.28
 
