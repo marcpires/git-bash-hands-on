@@ -13,6 +13,12 @@ Role Variables
 
 - **docker_packages_list**: Docker engine package list.
 
+- **docker_old_packages_list_fedora**: Fedora docker engine package list.
+
+- **docker_old_packages_list_centos**: CentOS docker engine package list.
+
+- **repo_link**: Repository link
+
 - **ansible_lsb.id**: Distribution name
 
 - **ansible_lsb.codename**: Distribution codename
