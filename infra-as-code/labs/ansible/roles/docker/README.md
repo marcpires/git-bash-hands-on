@@ -8,7 +8,6 @@ Requirements
 
 - software-properties-commons
 
-
 Role Variables
 --------------
 
@@ -32,7 +31,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
     - vars_files:
-      - "vars/packages_{{ ansible_os_family }}.yml" 
+      - "roles/vars/packages_{{ ansible_os_family | lower }}.yml"
       roles:
          - docker
 
@@ -45,4 +44,4 @@ Author Information
 ------------------
 
 Alécio Rocha (arocha@daitan.com)
-MArcelo Pires (mpires@daitan.com)
+Marcelo Pires (mpires@daitan.com)
