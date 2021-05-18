@@ -7,17 +7,11 @@
 #   - Groups of hosts are delimited by [header] elements
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
+#   - Add your hostnames or ip addresses  
 
+< add your hostname >
+< add your IP>
 
-[ansible_labs]
-10.76.189.140
+< add your hostname_2 >
+< add your IP_2 >
 
-[ansible_labs_fedora]
-192.168.122.203
-
-[ansible_labs_centos]
-192.168.122.28
-
-[other]
-10.86.133.238
-10.86.133.129
