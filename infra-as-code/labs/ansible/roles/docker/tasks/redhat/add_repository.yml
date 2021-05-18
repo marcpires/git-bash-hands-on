@@ -1,0 +1,8 @@
+---
+- name: Add Repository
+  ansible.builtin.yum_repository:
+    description: Docker ce repository
+    name: "docker-ce"
+    baseurl: "{{ repo_link }}"
+    state: present
+  register: add_repo

@@ -1,0 +1,28 @@
+docker_old_packages_list_fedora:
+  - docker
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-selinux
+  - docker-engine-selinux
+  - docker-engine
+
+docker_old_packages_list_centos:
+  - docker-ce
+  - docker-client
+  - docker-client-latest
+  - docker-common
+  - docker-latest
+  - docker-latest-logrotate
+  - docker-logrotate
+  - docker-engine
+
+repo_link: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/docker-ce.repo"
+
+docker_packages_list:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io

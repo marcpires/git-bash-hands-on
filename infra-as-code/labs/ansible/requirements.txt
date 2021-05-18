@@ -1,0 +1,5 @@
+ansible==3.2.0
+pip==21.0.1
+ansible-lint[community,yamlint]
+pre-commit
+
