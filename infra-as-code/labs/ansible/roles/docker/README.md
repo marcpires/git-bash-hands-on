@@ -19,12 +19,6 @@ Role Variables
 
 - **repo_link**: Repository link
 
-- **ansible_lsb.id**: Distribution name
-
-- **ansible_lsb.codename**: Distribution codename
-
-Example: **bionic**, etc
-
 Dependencies
 ------------
 
