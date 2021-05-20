@@ -1,0 +1,6 @@
+---
+- name: Remove old Docker packages
+  ansible.builtin.dnf:
+   name: "{{ docker_old_packages_list_fedora }}"
+   state: absent
+  register: docker_packages

@@ -1,0 +1,17 @@
+---
+- name: Download GPG key
+  ansible.builtin.apt_key:
+    id: 7EA0A9C3F273FCD8
+    url: https://download.docker.com/linux/ubuntu/gpg
+    keyring: /usr/share/keyrings/docker-archive-keyring.gpg
+    state: present
+
+- name: Add Repository
+  ansible.builtin.apt_repository:
+    repo: "{{ repo_link }}"
+    state: present
+  register: docker_repo
+
+- name: Update repository list
+  ansible.builtin.apt:
+    update_cache: yes

@@ -1,0 +1,7 @@
+docker_packages_list:
+  - docker
+  - docker.io
+  - containerd
+  - runc
+
+repo_link: "deb [arch={{ ansible_machine }} signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_lsb.codename }} stable"

@@ -1,0 +1,8 @@
+---
+- name: Update_environment
+  ansible.builtin.copy:
+    src: environment
+    dest: /etc/environment
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r

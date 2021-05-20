@@ -1,0 +1,6 @@
+---
+- name: Remove old Docker packages
+  ansible.builtin.yum:
+   name: "{{ docker_old_packages_list_centos }}"
+   state: absent
+  register: docker_packages
