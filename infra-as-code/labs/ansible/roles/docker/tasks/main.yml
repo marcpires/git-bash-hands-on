@@ -2,6 +2,10 @@
 - name: Include vars
   include_vars: "vars/{{ ansible_os_family | lower }}/packages_{{ ansible_os_family | lower }}.yml"
 
+- name: Include sub-task Stop_service_docker
+  include_tasks: "tasks/{{ ansible_os_family | lower }}/stop_service_docker.yml"
+  when: (ansible_facts['os_family'] | lower) == "debian"
+
 - name: Include sub-task Remove_packages
   include_tasks: "tasks/{{ ansible_os_family | lower }}/remove_packages.yml"
   when: (ansible_facts['os_family'] | lower) == "debian"
