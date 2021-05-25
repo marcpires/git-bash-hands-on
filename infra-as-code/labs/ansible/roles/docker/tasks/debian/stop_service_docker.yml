@@ -3,4 +3,4 @@
   ansible.builtin.systemd:
     name: docker
     state: stopped
-  register: docker_service 
+  register: docker_service

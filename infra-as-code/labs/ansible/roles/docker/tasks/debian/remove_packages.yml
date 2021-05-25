@@ -1,6 +1,17 @@
 ---
-- name: Remove old Docker Packages
-  ansible.builtin.apt:
-    name: "{{ docker_packages_list }}"
-    state: absent
-  register: docker_packages
+- name: Verify if new Packages installed
+  ansible.builtin.stat:
+    path: "{{ docker_new_packages_list }}"
+  register: docker_new_packages
+
+# - name: Remove docker_new_packages if installed
+#   ansible.builtin.apt:
+#     name: "{{ docker_new_packages_list }}"
+#     state: absent
+#   when: docker_new_packages.stat.exists
+
+# - name: Remove old Docker Packages
+#   ansible.builtin.apt:
+#     name: "{{ docker_packages_list }}"
+#     state: absent
+#   register: docker_packages

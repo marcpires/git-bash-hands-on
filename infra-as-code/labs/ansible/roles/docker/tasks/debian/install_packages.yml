@@ -5,15 +5,15 @@
     state: present
   register: repo_packages
 
-- name: Start docker service
-  ansible.builtin.systemd:
-    name: docker
-    enabled: yes
-    state: started
-#    retries: 4
-  register: docker_service   
-#  until: docker_service.stdout.find("") == 0
+# - name: Start docker service
+#   ansible.builtin.systemd:
+#     name: docker
+#     enabled: yes
+#     state: started
+#     retries: 4
+#   register: docker_service   
+#   until: docker_service.stdout.find("") == 0
 
-- name: debug
-  ansible.builtin.debug: 
-    msg: "{{ docker_service }}"
+# - name: debug
+#   ansible.builtin.debug: 
+#     msg: "{{ docker_service }}"
