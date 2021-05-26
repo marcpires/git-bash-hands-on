@@ -14,7 +14,6 @@
 [ansible_labs_fedora]
 192.168.122.203
 
-<<<<<<< HEAD
 [ansible_labs_centos]
 192.168.122.28
 
