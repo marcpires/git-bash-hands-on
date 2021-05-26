@@ -16,7 +16,9 @@ Role Variables
 
 - **flame_image_tag**: Tag name
 
--  
+- **dhammer_version**: Version Dhammer
+
+- **arch**: machine architecture
 
 Dependencies
 ------------
