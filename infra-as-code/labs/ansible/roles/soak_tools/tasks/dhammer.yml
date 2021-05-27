@@ -5,8 +5,3 @@
     dest: "{{ go_install_path }}/go/bin/dhammer"
     mode: u=rwx,g=rwx,o=rx
   register: dhammer
-
-- name: debug
-  debug:
-    msg: "{{ dhammer }}"
-

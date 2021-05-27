@@ -14,9 +14,3 @@
     tag: "{{ flame_image_tag }}"
     source: pull
   register: flame
-  ignore_errors: yes
-  
-
-- name: Debug Flame
-  debug:
-    msg: "{{ flame.failed }}"
