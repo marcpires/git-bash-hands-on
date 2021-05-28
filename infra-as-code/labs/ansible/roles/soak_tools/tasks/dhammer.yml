@@ -1,5 +1,5 @@
 ---
-- name: Go get Dhammer
+- name: Get Dhammer
   ansible.builtin.get_url:
     url: "https://github.com/ipchama/dhammer/releases/download/{{ dhammer_version }}/dhammer.{{ dhammer_version }}.linux.{{ arch }}"
     dest: "{{ go_install_path }}/go/bin/dhammer"
