@@ -1,7 +1,7 @@
 ---
 - name: Get Howitzer
   ansible.builtin.copy:
-    src: "{{ copy_src }}"
+    src: "{{ path_file_howitzer }}/{{ name_file }}.tar"
     dest: "{{ dest_path }}/"
     remote_src: no
   register: howitzer
