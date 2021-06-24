@@ -1,7 +1,7 @@
 ---
-- name: Get Howitzer
+- name: Get Howitzer    #Check later which location the image will be saved
   ansible.builtin.copy:
-    src: "{{ path_file_howitzer }}/{{ name_file }}.tar"
+    src: "{{ path_file_origin }}/{{ name_file }}.tar"
     dest: "{{ dest_path }}/"
     remote_src: no
   register: howitzer

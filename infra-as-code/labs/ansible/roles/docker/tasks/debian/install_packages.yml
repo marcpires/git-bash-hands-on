@@ -1,6 +1,14 @@
 ---
-- name: Install docker ce
+- name: Install docker
   ansible.builtin.package:
-    name: "{{ docker_packages_list }}"
+    name: "{{ docker_new_packages_list }}"
     state: present
   register: repo_packages
+
+- name: Start docker service
+  ansible.builtin.systemd:
+    name: docker
+    enabled: yes
+    state: started
+  register: docker_service
+
