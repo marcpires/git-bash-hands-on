@@ -1,2 +1,7 @@
 ---
 flame_image_tag: 0.12.0-master
+dhammer_version: v2.0.0
+arch: amd64
+path_file_origin: /tmp/howitzer
+dest_path: /tmp
+name_file: nsone_howitzer_develop

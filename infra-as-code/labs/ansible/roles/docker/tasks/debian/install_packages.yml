@@ -1,7 +1,7 @@
 ---
-- name: Install docker ce
+- name: Install docker
   ansible.builtin.package:
-    name: "{{ docker_packages_list }}"
+    name: "{{ docker_new_packages_list }}"
     state: present
   register: repo_packages
 
@@ -10,10 +10,5 @@
     name: docker
     enabled: yes
     state: started
-#    retries: 4
-  register: docker_service   
-#  until: docker_service.stdout.find("") == 0
+  register: docker_service
 
-- name: debug
-  ansible.builtin.debug: 
-    msg: "{{ docker_service }}"

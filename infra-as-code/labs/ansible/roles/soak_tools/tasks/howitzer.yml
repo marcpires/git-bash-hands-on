@@ -1,0 +1,27 @@
+---
+- name: Get Howitzer    #Check later which location the image will be saved
+  ansible.builtin.copy:
+    src: "{{ path_file_origin }}/{{ name_file }}.tar"
+    dest: "{{ dest_path }}/"
+    remote_src: no
+  register: howitzer
+
+- name: Load Howitzer image
+  ansible.builtin.docker_image:
+    name: nsone/howitzer:develop
+    load_path: "{{ dest_path }}/{{ name_file }}.tar"
+    source: load
+  register: howitzer_load
+
+- name: Verify if Howitzer is downloaded
+  ansible.builtin.stat:
+    path: "{{ dest_path }}/{{ name_file }}.tar"
+  register: howitzer_file
+
+- name: Remove Howitzer if downloaded
+  ansible.builtin.file:
+    path: "{{ dest_path }}/{{ name_file }}.tar"
+    state: absent
+  when: howitzer_file.stat.exists
+
+

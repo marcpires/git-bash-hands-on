@@ -1,6 +1,20 @@
 ---
+- name: Verify if Packages installed
+  package_facts:
+    manager: auto
+
+- name: Remove docker_new_packages if installed
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: absent
+    purge: yes
+  when: item in ansible_facts.packages
+  loop: "{{ docker_new_packages_list }}"
+  
 - name: Remove old Docker Packages
   ansible.builtin.apt:
-    name: "{{ docker_packages_list }}"
+    name: "{{ item }}"
     state: absent
-  register: docker_packages
+    purge: yes
+  when: item in ansible_facts.packages
+  loop: "{{ docker_packages_list }}"

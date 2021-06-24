@@ -1,15 +1,7 @@
 ---
-# PRIVILEG Monday
-- name: Go get Dhammer
-  shell: "go get -u github.com/ipchama/dhammer"
-  args:
-    executable: /bin/bash
-  environment:
-    GOPATH: "{{ go_install_path }}/go/ }}"
-  register: gos
-
-
-- name: debug
-  debug:
-    msg: "{{ gos }}"
-
+- name: Get Dhammer
+  ansible.builtin.get_url:
+    url: "https://github.com/ipchama/dhammer/releases/download/{{ dhammer_version }}/dhammer.{{ dhammer_version }}.linux.{{ arch }}"
+    dest: "{{ go_install_path }}/go/bin/dhammer"
+    mode: u=rwx,g=rwx,o=rx
+  register: dhammer

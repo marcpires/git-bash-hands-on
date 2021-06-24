@@ -32,9 +32,10 @@ No external dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+That is an example of how to use your role (for instance, with variables passed in as parameters):
 
     - hosts: servers
+      become: yes
       roles:
          - { role: golang, go_version: 1.15.11 }
          - golang # Uses the default variables values
@@ -47,4 +48,5 @@ Proprietary
 Author Information
 ------------------
 
-Marcelo Pires <mpires@daitan.com>
+Alécio Rocha (arocha@daitan.com)
+Marcelo Pires (mpires@daitan.com)

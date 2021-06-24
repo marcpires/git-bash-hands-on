@@ -1,0 +1,12 @@
+---
+- name: Verify docker service started
+  ansible.builtin.service_facts:
+
+
+- name: Stop docker service   # Stop with "Docker.socekt" because removing the docker
+  ansible.builtin.systemd:    # is leaving the API socket configuration file behind. 
+    name: docker.socket
+    state: stopped
+  register: docker_service
+  when: ansible_facts.services["docker"].state == "running"
+

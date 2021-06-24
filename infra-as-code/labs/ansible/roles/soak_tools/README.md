@@ -1,4 +1,4 @@
-Role Name
+Soak tools
 =========
 
 Install the Soak tools.
@@ -16,7 +16,11 @@ Role Variables
 
 - **flame_image_tag**: Tag name
 
--  
+- **dhammer_version**: Dhammer version
+
+- **path_file_origin**: Path where Howitzer will be downloaded. *Default*: **/tmp/howitzer**
+
+- **arch**: machine architecture
 
 Dependencies
 ------------
@@ -26,11 +30,10 @@ No external dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+That is an example of how to use your role (for instance, with variables passed in as parameters):
 
     - hosts: servers
-    - vars_files:
-      - "roles/vars/packages_{{ ansible_os_family | lower }}.yml"
+      become: yes
       roles:
          - soak_tools
 
